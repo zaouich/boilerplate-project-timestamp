@@ -44,6 +44,7 @@ const getResult = (req,res)=>{
 
 const router= Router()
 router.route("/:date?").get(checkIfExict,checkDate,chekcNumber, getResult)
+router.route("/").get(checkIfExict)
 app.use("/api",router)
 
 app.listen(8000,()=>{

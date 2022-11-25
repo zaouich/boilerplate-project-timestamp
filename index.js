@@ -6,6 +6,9 @@ const { Router } = require('express');
 var express = require('express');
 var app = express();
 
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, '/views/index.html'));
+}); 
 const checkIfExict= (req,res,next)=>{
   if(!req.params.date){
     return res.status(200).json({

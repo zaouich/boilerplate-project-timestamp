@@ -42,9 +42,7 @@ const getResult = (req,res)=>{
   })
 } 
 
-app.get('/', function(req, res){
-  res.redirect('/api/');
-});
+
 const router= Router()
 router.route("/:date?").get(checkIfExict,checkDate,chekcNumber, getResult)
 router.route("/").get(checkIfExict)

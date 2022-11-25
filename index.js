@@ -36,6 +36,7 @@ const chekcNumber = (req,res,next)=>{
   next()
 }
 const getResult = (req,res)=>{
+  res.writeHead(200,{"content-type":"application/json"})
   return res.status(200).json({
     unix:new Date(req.params.date).getTime(),
     utc:new Date(req.params.date).toUTCString()

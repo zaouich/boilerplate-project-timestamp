@@ -4,6 +4,8 @@
 // init project
 const { Router } = require('express');
 var express = require('express');
+const cors = require("cors")
+app.use(cors({optionSuccessStatus: 200}))
 var app = express();
 const path = require("path")
 app.get('/', function(req, res) {

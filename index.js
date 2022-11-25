@@ -9,7 +9,7 @@ var app = express();
 const checkIfExict= (req,res,next)=>{
   if(!req.params.date){
     return res.status(200).json({
-      unix:new Date().getTime()*1,
+      unix:new Date().getTime(),
       utc:new Date().toUTCString()
     })
   }
@@ -37,7 +37,7 @@ const chekcNumber = (req,res,next)=>{
 }
 const getResult = (req,res)=>{
   return res.status(200).json({
-    unix:new Date(req.params.date).getTime()*1,
+    unix:new Date(req.params.date).getTime(),
     utc:new Date(req.params.date).toUTCString()
   })
 } 

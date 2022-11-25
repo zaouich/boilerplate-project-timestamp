@@ -50,6 +50,6 @@ router.route("/:date?").get(checkIfExict,checkDate,chekcNumber, getResult)
 router.route("/").get(checkIfExict)
 app.use("/api",router)
 
-app.listen(8000,()=>{
+app.listen(3000,()=>{
   console.log("listing to port..");
 })
